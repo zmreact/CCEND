@@ -7,120 +7,142 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		92BC13AD1F6AC0DA00AF5B71 /* transline.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92BC13AB1F6AC0DA00AF5B71 /* transline.cpp */; };
-		92BC13AE1F6AC0DA00AF5B71 /* transline.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 92BC13AC1F6AC0DA00AF5B71 /* transline.hpp */; };
+		921D13301F7430C600A02068 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 921D132F1F7430C600A02068 /* main.cpp */; };
+		921D133B1F7431D800A02068 /* QtCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 921D133A1F7431D800A02068 /* QtCore.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		921D132A1F7430C600A02068 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		92BC13AB1F6AC0DA00AF5B71 /* transline.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = transline.cpp; sourceTree = "<group>"; };
-		92BC13AC1F6AC0DA00AF5B71 /* transline.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = transline.hpp; sourceTree = "<group>"; };
-		92C15A361F6998E800445473 /* libtransline.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libtransline.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		921D132C1F7430C600A02068 /* smc */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = smc; sourceTree = BUILT_PRODUCTS_DIR; };
+		921D132F1F7430C600A02068 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		921D13361F74311D00A02068 /* main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = main.h; sourceTree = "<group>"; };
+		921D13381F7431AD00A02068 /* shared.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = shared.h; path = smc/shared.h; sourceTree = "<group>"; };
+		921D133A1F7431D800A02068 /* QtCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtCore.framework; path = ../../../../Qt/5.9.1/clang_64/lib/QtCore.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		92C15A331F6998E800445473 /* Frameworks */ = {
+		921D13291F7430C600A02068 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				921D133B1F7431D800A02068 /* QtCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		92C15A2D1F6998E800445473 = {
+		921D13231F7430C600A02068 = {
 			isa = PBXGroup;
 			children = (
-				92BC13AC1F6AC0DA00AF5B71 /* transline.hpp */,
-				92BC13AB1F6AC0DA00AF5B71 /* transline.cpp */,
-				92C15A371F6998E800445473 /* Products */,
+				921D13381F7431AD00A02068 /* shared.h */,
+				921D132E1F7430C600A02068 /* smc */,
+				921D132D1F7430C600A02068 /* Products */,
+				921D13391F7431D800A02068 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		92C15A371F6998E800445473 /* Products */ = {
+		921D132D1F7430C600A02068 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				92C15A361F6998E800445473 /* libtransline.dylib */,
+				921D132C1F7430C600A02068 /* smc */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
+		921D132E1F7430C600A02068 /* smc */ = {
+			isa = PBXGroup;
+			children = (
+				921D132F1F7430C600A02068 /* main.cpp */,
+				921D13361F74311D00A02068 /* main.h */,
+			);
+			path = smc;
+			sourceTree = "<group>";
+		};
+		921D13391F7431D800A02068 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				921D133A1F7431D800A02068 /* QtCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		92C15A341F6998E800445473 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				92BC13AE1F6AC0DA00AF5B71 /* transline.hpp in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
-		92C15A351F6998E800445473 /* transline */ = {
+		921D132B1F7430C600A02068 /* smc */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 92C15A3A1F6998E800445473 /* Build configuration list for PBXNativeTarget "transline" */;
+			buildConfigurationList = 921D13331F7430C600A02068 /* Build configuration list for PBXNativeTarget "smc" */;
 			buildPhases = (
-				92C15A321F6998E800445473 /* Sources */,
-				92C15A331F6998E800445473 /* Frameworks */,
-				92C15A341F6998E800445473 /* Headers */,
+				921D13281F7430C600A02068 /* Sources */,
+				921D13291F7430C600A02068 /* Frameworks */,
+				921D132A1F7430C600A02068 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = transline;
-			productName = transline;
-			productReference = 92C15A361F6998E800445473 /* libtransline.dylib */;
-			productType = "com.apple.product-type.library.dynamic";
+			name = smc;
+			productName = smc;
+			productReference = 921D132C1F7430C600A02068 /* smc */;
+			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		92C15A2E1F6998E800445473 /* Project object */ = {
+		921D13241F7430C600A02068 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = MTUCI;
 				TargetAttributes = {
-					92C15A351F6998E800445473 = {
+					921D132B1F7430C600A02068 = {
 						CreatedOnToolsVersion = 8.0;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = 92C15A311F6998E800445473 /* Build configuration list for PBXProject "transline" */;
+			buildConfigurationList = 921D13271F7430C600A02068 /* Build configuration list for PBXProject "smc" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 92C15A2D1F6998E800445473;
-			productRefGroup = 92C15A371F6998E800445473 /* Products */;
+			mainGroup = 921D13231F7430C600A02068;
+			productRefGroup = 921D132D1F7430C600A02068 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				92C15A351F6998E800445473 /* transline */,
+				921D132B1F7430C600A02068 /* smc */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		92C15A321F6998E800445473 /* Sources */ = {
+		921D13281F7430C600A02068 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92BC13AD1F6AC0DA00AF5B71 /* transline.cpp in Sources */,
+				921D13301F7430C600A02068 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		92C15A381F6998E800445473 /* Debug */ = {
+		921D13311F7430C600A02068 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -167,7 +189,7 @@
 			};
 			name = Debug;
 		};
-		92C15A391F6998E800445473 /* Release */ = {
+		921D13321F7430C600A02068 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -207,22 +229,20 @@
 			};
 			name = Release;
 		};
-		92C15A3B1F6998E800445473 /* Debug */ = {
+		921D13341F7430C600A02068 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				EXECUTABLE_PREFIX = lib;
+				FRAMEWORK_SEARCH_PATHS = /Users/Denis/Qt/5.9.1/clang_64/lib;
+				LD_RUNPATH_SEARCH_PATHS = /Users/Denis/Qt/5.9.1/clang_64/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		92C15A3C1F6998E800445473 /* Release */ = {
+		921D13351F7430C600A02068 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				EXECUTABLE_PREFIX = lib;
+				FRAMEWORK_SEARCH_PATHS = /Users/Denis/Qt/5.9.1/clang_64/lib;
+				LD_RUNPATH_SEARCH_PATHS = /Users/Denis/Qt/5.9.1/clang_64/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -230,25 +250,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		92C15A311F6998E800445473 /* Build configuration list for PBXProject "transline" */ = {
+		921D13271F7430C600A02068 /* Build configuration list for PBXProject "smc" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				92C15A381F6998E800445473 /* Debug */,
-				92C15A391F6998E800445473 /* Release */,
+				921D13311F7430C600A02068 /* Debug */,
+				921D13321F7430C600A02068 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		92C15A3A1F6998E800445473 /* Build configuration list for PBXNativeTarget "transline" */ = {
+		921D13331F7430C600A02068 /* Build configuration list for PBXNativeTarget "smc" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				92C15A3B1F6998E800445473 /* Debug */,
-				92C15A3C1F6998E800445473 /* Release */,
+				921D13341F7430C600A02068 /* Debug */,
+				921D13351F7430C600A02068 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 92C15A2E1F6998E800445473 /* Project object */;
+	rootObject = 921D13241F7430C600A02068 /* Project object */;
 }

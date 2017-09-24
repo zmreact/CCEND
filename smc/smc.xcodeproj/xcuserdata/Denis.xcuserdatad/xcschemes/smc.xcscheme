@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "92D8BAE51F7062AC00DAB41E"
-               BuildableName = "cc_decoder"
-               BlueprintName = "cc_decoder"
-               ReferencedContainer = "container:cc_decoder.xcodeproj">
+               BlueprintIdentifier = "921D132B1F7430C600A02068"
+               BuildableName = "smc"
+               BlueprintName = "smc"
+               ReferencedContainer = "container:smc.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "92D8BAE51F7062AC00DAB41E"
-            BuildableName = "cc_decoder"
-            BlueprintName = "cc_decoder"
-            ReferencedContainer = "container:cc_decoder.xcodeproj">
+            BlueprintIdentifier = "921D132B1F7430C600A02068"
+            BuildableName = "smc"
+            BlueprintName = "smc"
+            ReferencedContainer = "container:smc.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -55,10 +55,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "92D8BAE51F7062AC00DAB41E"
-            BuildableName = "cc_decoder"
-            BlueprintName = "cc_decoder"
-            ReferencedContainer = "container:cc_decoder.xcodeproj">
+            BlueprintIdentifier = "921D132B1F7430C600A02068"
+            BuildableName = "smc"
+            BlueprintName = "smc"
+            ReferencedContainer = "container:smc.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -74,10 +74,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "92D8BAE51F7062AC00DAB41E"
-            BuildableName = "cc_decoder"
-            BlueprintName = "cc_decoder"
-            ReferencedContainer = "container:cc_decoder.xcodeproj">
+            BlueprintIdentifier = "921D132B1F7430C600A02068"
+            BuildableName = "smc"
+            BlueprintName = "smc"
+            ReferencedContainer = "container:smc.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

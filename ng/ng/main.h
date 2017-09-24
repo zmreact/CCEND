@@ -2,5 +2,6 @@
 #include <math.h>
 #include <unistd.h>
 #include "shared.h"
-#include "input.h"
 using namespace std;
+
+int polynom = 0b1011;

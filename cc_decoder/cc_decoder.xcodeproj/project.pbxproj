@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		923F88CF1F6AC7A3007583D7 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 923F88CE1F6AC7A3007583D7 /* main.cpp */; };
+		9257E9D41F7062F200C9601B /* QtCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9257E9D31F7062F200C9601B /* QtCore.framework */; };
+		92D8BAEA1F7062AC00DAB41E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92D8BAE91F7062AC00DAB41E /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		923F88C91F6AC7A2007583D7 /* CopyFiles */ = {
+		92D8BAE41F7062AC00DAB41E /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -23,45 +24,56 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		923F88CB1F6AC7A3007583D7 /* cc_decoder */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = cc_decoder; sourceTree = BUILT_PRODUCTS_DIR; };
-		923F88CE1F6AC7A3007583D7 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		923F88D51F6AC7B8007583D7 /* main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = main.h; sourceTree = "<group>"; };
-		923F88DD1F6AC8F0007583D7 /* transline.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = transline.hpp; path = cc_decoder/transline.hpp; sourceTree = "<group>"; };
+		9257E9D01F7062CB00C9601B /* main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = main.h; sourceTree = "<group>"; };
+		9257E9D11F7062CB00C9601B /* shared.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = shared.h; path = cc_decoder/shared.h; sourceTree = "<group>"; };
+		9257E9D31F7062F200C9601B /* QtCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtCore.framework; path = ../../../../Qt/5.9.1/clang_64/lib/QtCore.framework; sourceTree = "<group>"; };
+		92D8BAE61F7062AC00DAB41E /* cc_decoder */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = cc_decoder; sourceTree = BUILT_PRODUCTS_DIR; };
+		92D8BAE91F7062AC00DAB41E /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		923F88C81F6AC7A2007583D7 /* Frameworks */ = {
+		92D8BAE31F7062AC00DAB41E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9257E9D41F7062F200C9601B /* QtCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		923F88C21F6AC7A2007583D7 = {
+		9257E9D21F7062F200C9601B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				923F88DD1F6AC8F0007583D7 /* transline.hpp */,
-				923F88CD1F6AC7A3007583D7 /* cc_decoder */,
-				923F88CC1F6AC7A3007583D7 /* Products */,
+				9257E9D31F7062F200C9601B /* QtCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		92D8BADD1F7062AC00DAB41E = {
+			isa = PBXGroup;
+			children = (
+				9257E9D11F7062CB00C9601B /* shared.h */,
+				92D8BAE81F7062AC00DAB41E /* cc_decoder */,
+				92D8BAE71F7062AC00DAB41E /* Products */,
+				9257E9D21F7062F200C9601B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		923F88CC1F6AC7A3007583D7 /* Products */ = {
+		92D8BAE71F7062AC00DAB41E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				923F88CB1F6AC7A3007583D7 /* cc_decoder */,
+				92D8BAE61F7062AC00DAB41E /* cc_decoder */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		923F88CD1F6AC7A3007583D7 /* cc_decoder */ = {
+		92D8BAE81F7062AC00DAB41E /* cc_decoder */ = {
 			isa = PBXGroup;
 			children = (
-				923F88CE1F6AC7A3007583D7 /* main.cpp */,
-				923F88D51F6AC7B8007583D7 /* main.h */,
+				9257E9D01F7062CB00C9601B /* main.h */,
+				92D8BAE91F7062AC00DAB41E /* main.cpp */,
 			);
 			path = cc_decoder;
 			sourceTree = "<group>";
@@ -69,13 +81,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		923F88CA1F6AC7A2007583D7 /* cc_decoder */ = {
+		92D8BAE51F7062AC00DAB41E /* cc_decoder */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 923F88D21F6AC7A3007583D7 /* Build configuration list for PBXNativeTarget "cc_decoder" */;
+			buildConfigurationList = 92D8BAED1F7062AC00DAB41E /* Build configuration list for PBXNativeTarget "cc_decoder" */;
 			buildPhases = (
-				923F88C71F6AC7A2007583D7 /* Sources */,
-				923F88C81F6AC7A2007583D7 /* Frameworks */,
-				923F88C91F6AC7A2007583D7 /* CopyFiles */,
+				92D8BAE21F7062AC00DAB41E /* Sources */,
+				92D8BAE31F7062AC00DAB41E /* Frameworks */,
+				92D8BAE41F7062AC00DAB41E /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -83,54 +95,54 @@
 			);
 			name = cc_decoder;
 			productName = cc_decoder;
-			productReference = 923F88CB1F6AC7A3007583D7 /* cc_decoder */;
+			productReference = 92D8BAE61F7062AC00DAB41E /* cc_decoder */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		923F88C31F6AC7A2007583D7 /* Project object */ = {
+		92D8BADE1F7062AC00DAB41E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = MTUCI;
 				TargetAttributes = {
-					923F88CA1F6AC7A2007583D7 = {
+					92D8BAE51F7062AC00DAB41E = {
 						CreatedOnToolsVersion = 8.0;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = 923F88C61F6AC7A2007583D7 /* Build configuration list for PBXProject "cc_decoder" */;
+			buildConfigurationList = 92D8BAE11F7062AC00DAB41E /* Build configuration list for PBXProject "cc_decoder" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 923F88C21F6AC7A2007583D7;
-			productRefGroup = 923F88CC1F6AC7A3007583D7 /* Products */;
+			mainGroup = 92D8BADD1F7062AC00DAB41E;
+			productRefGroup = 92D8BAE71F7062AC00DAB41E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				923F88CA1F6AC7A2007583D7 /* cc_decoder */,
+				92D8BAE51F7062AC00DAB41E /* cc_decoder */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		923F88C71F6AC7A2007583D7 /* Sources */ = {
+		92D8BAE21F7062AC00DAB41E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				923F88CF1F6AC7A3007583D7 /* main.cpp in Sources */,
+				92D8BAEA1F7062AC00DAB41E /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		923F88D01F6AC7A3007583D7 /* Debug */ = {
+		92D8BAEB1F7062AC00DAB41E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -177,7 +189,7 @@
 			};
 			name = Debug;
 		};
-		923F88D11F6AC7A3007583D7 /* Release */ = {
+		92D8BAEC1F7062AC00DAB41E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -217,24 +229,20 @@
 			};
 			name = Release;
 		};
-		923F88D31F6AC7A3007583D7 /* Debug */ = {
+		92D8BAEE1F7062AC00DAB41E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/cc_decoder",
-				);
+				FRAMEWORK_SEARCH_PATHS = /Users/Denis/Qt/5.9.1/clang_64/lib;
+				LD_RUNPATH_SEARCH_PATHS = /Users/Denis/Qt/5.9.1/clang_64/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		923F88D41F6AC7A3007583D7 /* Release */ = {
+		92D8BAEF1F7062AC00DAB41E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/cc_decoder",
-				);
+				FRAMEWORK_SEARCH_PATHS = /Users/Denis/Qt/5.9.1/clang_64/lib;
+				LD_RUNPATH_SEARCH_PATHS = /Users/Denis/Qt/5.9.1/clang_64/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -242,25 +250,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		923F88C61F6AC7A2007583D7 /* Build configuration list for PBXProject "cc_decoder" */ = {
+		92D8BAE11F7062AC00DAB41E /* Build configuration list for PBXProject "cc_decoder" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				923F88D01F6AC7A3007583D7 /* Debug */,
-				923F88D11F6AC7A3007583D7 /* Release */,
+				92D8BAEB1F7062AC00DAB41E /* Debug */,
+				92D8BAEC1F7062AC00DAB41E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		923F88D21F6AC7A3007583D7 /* Build configuration list for PBXNativeTarget "cc_decoder" */ = {
+		92D8BAED1F7062AC00DAB41E /* Build configuration list for PBXNativeTarget "cc_decoder" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				923F88D31F6AC7A3007583D7 /* Debug */,
-				923F88D41F6AC7A3007583D7 /* Release */,
+				92D8BAEE1F7062AC00DAB41E /* Debug */,
+				92D8BAEF1F7062AC00DAB41E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 923F88C31F6AC7A2007583D7 /* Project object */;
+	rootObject = 92D8BADE1F7062AC00DAB41E /* Project object */;
 }

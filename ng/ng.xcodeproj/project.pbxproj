@@ -7,66 +7,73 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		927D7AF61F6996130092580A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 927D7AF51F6996130092580A /* main.cpp */; };
-		92A2E8B91F704D7400B2346E /* QtCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92A2E8B81F704D7400B2346E /* QtCore.framework */; };
-		92E0F3FD1F76D22D00D40386 /* input.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92E0F3FB1F76D22D00D40386 /* input.cpp */; };
+		921D13491F7437BF00A02068 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 921D13481F7437BF00A02068 /* main.cpp */; };
+		921D13511F7437CF00A02068 /* QtCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 921D13501F7437CF00A02068 /* QtCore.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		921D13431F7437BF00A02068 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		9237915D1F6AAF7000D9524F /* main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = main.h; sourceTree = "<group>"; };
-		927D7AF21F6996130092580A /* cc_encoder */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = cc_encoder; sourceTree = BUILT_PRODUCTS_DIR; };
-		927D7AF51F6996130092580A /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		92A2E8B81F704D7400B2346E /* QtCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtCore.framework; path = ../../../../Qt/5.9.1/clang_64/lib/QtCore.framework; sourceTree = "<group>"; };
-		92A40ACB1F6AC61300482F88 /* shared.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = shared.h; path = cc_encoder/shared.h; sourceTree = "<group>"; };
-		92E0F3FB1F76D22D00D40386 /* input.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = input.cpp; sourceTree = "<group>"; };
-		92E0F3FC1F76D22D00D40386 /* input.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = input.h; sourceTree = "<group>"; };
+		921D13451F7437BF00A02068 /* ng */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ng; sourceTree = BUILT_PRODUCTS_DIR; };
+		921D13481F7437BF00A02068 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		921D13501F7437CF00A02068 /* QtCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtCore.framework; path = ../../../../Qt/5.9.1/clang_64/lib/QtCore.framework; sourceTree = "<group>"; };
+		921D13521F74384B00A02068 /* main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = main.h; sourceTree = "<group>"; };
+		921D13531F74386C00A02068 /* shared.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = shared.h; path = ng/shared.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		927D7AEF1F6996130092580A /* Frameworks */ = {
+		921D13421F7437BF00A02068 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92A2E8B91F704D7400B2346E /* QtCore.framework in Frameworks */,
+				921D13511F7437CF00A02068 /* QtCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		927D7AE91F6996130092580A = {
+		921D133C1F7437BF00A02068 = {
 			isa = PBXGroup;
 			children = (
-				92A40ACB1F6AC61300482F88 /* shared.h */,
-				927D7AF41F6996130092580A /* cc_encoder */,
-				927D7AF31F6996130092580A /* Products */,
-				92A2E8B71F704D7400B2346E /* Frameworks */,
+				921D13531F74386C00A02068 /* shared.h */,
+				921D13471F7437BF00A02068 /* ng */,
+				921D13461F7437BF00A02068 /* Products */,
+				921D134F1F7437CE00A02068 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		927D7AF31F6996130092580A /* Products */ = {
+		921D13461F7437BF00A02068 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				927D7AF21F6996130092580A /* cc_encoder */,
+				921D13451F7437BF00A02068 /* ng */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		927D7AF41F6996130092580A /* cc_encoder */ = {
+		921D13471F7437BF00A02068 /* ng */ = {
 			isa = PBXGroup;
 			children = (
-				927D7AF51F6996130092580A /* main.cpp */,
-				9237915D1F6AAF7000D9524F /* main.h */,
-				92E0F3FB1F76D22D00D40386 /* input.cpp */,
-				92E0F3FC1F76D22D00D40386 /* input.h */,
+				921D13481F7437BF00A02068 /* main.cpp */,
+				921D13521F74384B00A02068 /* main.h */,
 			);
-			path = cc_encoder;
+			path = ng;
 			sourceTree = "<group>";
 		};
-		92A2E8B71F704D7400B2346E /* Frameworks */ = {
+		921D134F1F7437CE00A02068 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				92A2E8B81F704D7400B2346E /* QtCore.framework */,
+				921D13501F7437CF00A02068 /* QtCore.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -74,68 +81,68 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		927D7AF11F6996130092580A /* cc_encoder */ = {
+		921D13441F7437BF00A02068 /* ng */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 927D7AF91F6996130092580A /* Build configuration list for PBXNativeTarget "cc_encoder" */;
+			buildConfigurationList = 921D134C1F7437BF00A02068 /* Build configuration list for PBXNativeTarget "ng" */;
 			buildPhases = (
-				927D7AEE1F6996130092580A /* Sources */,
-				927D7AEF1F6996130092580A /* Frameworks */,
+				921D13411F7437BF00A02068 /* Sources */,
+				921D13421F7437BF00A02068 /* Frameworks */,
+				921D13431F7437BF00A02068 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = cc_encoder;
-			productName = cc_encoder;
-			productReference = 927D7AF21F6996130092580A /* cc_encoder */;
+			name = ng;
+			productName = ng;
+			productReference = 921D13451F7437BF00A02068 /* ng */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		927D7AEA1F6996130092580A /* Project object */ = {
+		921D133D1F7437BF00A02068 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = MTUCI;
 				TargetAttributes = {
-					927D7AF11F6996130092580A = {
+					921D13441F7437BF00A02068 = {
 						CreatedOnToolsVersion = 8.0;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = 927D7AED1F6996130092580A /* Build configuration list for PBXProject "cc_encoder" */;
+			buildConfigurationList = 921D13401F7437BF00A02068 /* Build configuration list for PBXProject "ng" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 927D7AE91F6996130092580A;
-			productRefGroup = 927D7AF31F6996130092580A /* Products */;
+			mainGroup = 921D133C1F7437BF00A02068;
+			productRefGroup = 921D13461F7437BF00A02068 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				927D7AF11F6996130092580A /* cc_encoder */,
+				921D13441F7437BF00A02068 /* ng */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		927D7AEE1F6996130092580A /* Sources */ = {
+		921D13411F7437BF00A02068 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				927D7AF61F6996130092580A /* main.cpp in Sources */,
-				92E0F3FD1F76D22D00D40386 /* input.cpp in Sources */,
+				921D13491F7437BF00A02068 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		927D7AF71F6996130092580A /* Debug */ = {
+		921D134A1F7437BF00A02068 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -182,7 +189,7 @@
 			};
 			name = Debug;
 		};
-		927D7AF81F6996130092580A /* Release */ = {
+		921D134B1F7437BF00A02068 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -222,24 +229,20 @@
 			};
 			name = Release;
 		};
-		927D7AFA1F6996130092580A /* Debug */ = {
+		921D134D1F7437BF00A02068 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
 				FRAMEWORK_SEARCH_PATHS = /Users/Denis/Qt/5.9.1/clang_64/lib;
 				LD_RUNPATH_SEARCH_PATHS = /Users/Denis/Qt/5.9.1/clang_64/lib;
-				LIBRARY_SEARCH_PATHS = "/Users/Denis/Dropbox/Programming/cc_edcoder-ng/cc_decoder/cc_decoder";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		927D7AFB1F6996130092580A /* Release */ = {
+		921D134E1F7437BF00A02068 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
 				FRAMEWORK_SEARCH_PATHS = /Users/Denis/Qt/5.9.1/clang_64/lib;
 				LD_RUNPATH_SEARCH_PATHS = /Users/Denis/Qt/5.9.1/clang_64/lib;
-				LIBRARY_SEARCH_PATHS = "/Users/Denis/Dropbox/Programming/cc_edcoder-ng/cc_decoder/cc_decoder";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -247,25 +250,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		927D7AED1F6996130092580A /* Build configuration list for PBXProject "cc_encoder" */ = {
+		921D13401F7437BF00A02068 /* Build configuration list for PBXProject "ng" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				927D7AF71F6996130092580A /* Debug */,
-				927D7AF81F6996130092580A /* Release */,
+				921D134A1F7437BF00A02068 /* Debug */,
+				921D134B1F7437BF00A02068 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		927D7AF91F6996130092580A /* Build configuration list for PBXNativeTarget "cc_encoder" */ = {
+		921D134C1F7437BF00A02068 /* Build configuration list for PBXNativeTarget "ng" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				927D7AFA1F6996130092580A /* Debug */,
-				927D7AFB1F6996130092580A /* Release */,
+				921D134D1F7437BF00A02068 /* Debug */,
+				921D134E1F7437BF00A02068 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 927D7AEA1F6996130092580A /* Project object */;
+	rootObject = 921D133D1F7437BF00A02068 /* Project object */;
 }

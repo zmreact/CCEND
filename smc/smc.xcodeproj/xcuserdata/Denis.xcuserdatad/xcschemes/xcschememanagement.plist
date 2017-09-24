@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>cc_decoder.xcscheme</key>
+		<key>smc.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>92D8BAE51F7062AC00DAB41E</key>
+		<key>921D132B1F7430C600A02068</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -33,6 +33,9 @@ enum states {E, N, D};
 #define DUP_0 memcpy((bool *) shmem.data() + DUP_OFFSET, new bool(0), sizeof(bool))
 
 #define PID * (new pid_t(getpid()))
+#define EPID * ((pid_t *) shmem.data() + EPID_OFFSET)
+#define NPID * ((pid_t *) shmem.data() + NPID_OFFSET)
+#define DPID * ((pid_t *) shmem.data() + DPID_OFFSET)
 
 #define SET_EPID memcpy((pid_t *) shmem.data() + EPID_OFFSET, &PID, sizeof(PID))
 #define SET_NPID memcpy((pid_t *) shmem.data() + NPID_OFFSET, &PID, sizeof(PID))

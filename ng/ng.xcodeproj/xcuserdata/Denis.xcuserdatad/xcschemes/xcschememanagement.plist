@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>transline.xcscheme</key>
+		<key>ng.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>92C15A351F6998E800445473</key>
+		<key>921D13441F7437BF00A02068</key>
 		<dict>
 			<key>primary</key>
 			<true/>
