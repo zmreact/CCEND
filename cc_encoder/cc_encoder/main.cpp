@@ -1,4 +1,11 @@
-#include "main.h"
+#include <iostream>
+#include <math.h>
+#include <unistd.h>
+#include "shared.h"
+#include "input.h"
+#include "encoder.h"
+using namespace std;
+
 
 #define UNIVERSITY "MTUCI"
 #define STGROUP "BSU1401"
@@ -18,28 +25,35 @@ int main(int argc, const char * argv[]) {
         SET_EPID;
         EUP_1;
         SWITCH_TO_E_STATE;
-        
+        STATE = E;
         
 
         while (EUP) {
             switch (STATE) {
                 case E:
+                {
                     cout << "E_STATE" << endl << endl;
                     
                     cout << "Source data codes: " << endl;
-                    for (const int * i = sseq; i < sseq + sizeof(sseq) / sizeof(* sseq) - 1; i++) {
-                        input input;
-                        memcpy(&d_pointer, &sdata[* i - 1], sizeof(* sdata));
+                    input input;
+                    for (int i = 0; i < * input.sdatasize; i++) {
+                        memcpy((int *) shmem.data() + D_OFFSET + i, &input.sdata[*input.sseq - 1], sizeof(*input.sdata));
+                        input.sseq++;
                     }
-                    for (int i = 0; i < 16; i++) {
-                        cout << bitset<4>(* ((int *) shmem.data() + D_OFFSET + i * sizeof(i))) << " ";
+                    
+                    for (int i = 0; i < * input.sdatasize; i++) {
+                        cout << bitset<4>(* ((int *) shmem.data() + D_OFFSET + i)) << " ";
                     }
                     cout << endl << endl;
                     
-                    cout << "Encoding (7, 3) anti-jamming codes..." << endl;
-                    cout << "Forming polynomial: " << std::bitset<4>(f_poly) << endl;
+                    cout << "Encoding to (7, 4) anti-jamming cyclic codes..." << endl;
+                    cout << "Forming polynomial: " << endl;
+                    cout << bitset<4>(*input.f_poly) << endl;
                     cout << "Source anti-jamming codes:" << endl;
-                    // codes to out
+                    encoder encoder((const int *) shmem.data() + D_OFFSET, input.f_poly);
+                    for (int i = 0; i < * input.sdatasize; i++) {
+                        encoder.ajdata();
+                    }
                     cout << endl << endl;
                     
                     cout << "Sending...";
@@ -47,8 +61,8 @@ int main(int argc, const char * argv[]) {
 
                     if (NUP) SWITCH_TO_N_STATE;
                     else SWITCH_TO_D_STATE;
-                    
                     break;
+                }
                 case N:
                     cout << "N_STATE" << endl << endl;
                     

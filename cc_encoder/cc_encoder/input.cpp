@@ -1,9 +1,11 @@
 #include "input.h"
 
 input :: input() {
-    sseq = default_sseq.data();
-    sdata = default_sdata.data();
-    f_poly = default_sdata.data();
+    sseq = &default_sseq[0];
+    sdata = &default_sdata[0];
+    sdatasize = &default_sdatasize;
+    f_poly = &default_f_poly;
+
 }
 
 input :: input(const char * inputpath[]) {
