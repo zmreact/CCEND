@@ -35,7 +35,7 @@ static const bool DOWN = false;
 #define NUP_0 memcpy((bool *) shmem.data() + NUP_OFFSET, &DOWN), sizeof(DOWN))
 #define DUP_0 memcpy((bool *) shmem.data() + DUP_OFFSET, &DOWN, sizeof(DOWN))
 
-#define PID * (new pid_t(getpid()))
+static pid_t * PID (new pid_t(getpid()));
 
 #define SET_ENCODER_PID memcpy((pid_t *) shmem.data() + EPID_OFFSET, &PID, sizeof(PID))
 #define SET_NOISEGENERATOR_PID memcpy((pid_t *) shmem.data() + NPID_OFFSET, &PID, sizeof(PID))

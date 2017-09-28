@@ -9,7 +9,7 @@ int encoder :: aj_data(const int * _s_data) {
     const int * s_data = _s_data;
     
     int divider = *s_data << (n - k);
-    int divident = *f_polynomial << (n - k);
+    int divident = 0;
     
     while (divider >= pow(2, n - k)) {
         divident = *f_polynomial << (n - k);
