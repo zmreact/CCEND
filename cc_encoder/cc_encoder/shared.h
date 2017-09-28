@@ -12,12 +12,12 @@ QSharedMemory shmem("/shmem", nullptr);
 #define D_SIZE 16
 
 enum states {E, N, D};
-const states E_STATE = E;
-const states N_STATE = N;
-const states D_STATE = D;
+static const states E_STATE = E;
+static const states N_STATE = N;
+static const states D_STATE = D;
 
-const bool UP = true;
-const bool DOWN = false;
+static const bool UP = true;
+static const bool DOWN = false;
 
 #define SWITCH_TO_E_STATE memcpy((states *) shmem.data() + STATE_OFFSET, &E_STATE, sizeof(E_STATE))
 #define SWITCH_TO_N_STATE memcpy((states *) shmem.data() + STATE_OFFSET, &N_STATE, sizeof(N_STATE))
