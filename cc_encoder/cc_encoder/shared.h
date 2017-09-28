@@ -9,7 +9,7 @@ QSharedMemory shmem("/shmem", nullptr);
 #define DUP_OFFSET 14
 #define DPID_OFFSET 15
 #define D_OFFSET 19
-#define D_SIZE 64
+#define D_SIZE 16
 
 enum states {E, N, D};
 const states E_STATE = E;
@@ -37,6 +37,6 @@ const bool DOWN = false;
 
 #define PID * (new pid_t(getpid()))
 
-#define SET_EPID memcpy((pid_t *) shmem.data() + EPID_OFFSET, &PID, sizeof(PID))
-#define SET_NPID memcpy((pid_t *) shmem.data() + NPID_OFFSET, &PID, sizeof(PID))
-#define SET_DPID memcpy((pid_t *) shmem.data() + DPID_OFFSET, &PID, sizeof(PID))
+#define SET_ENCODER_PID memcpy((pid_t *) shmem.data() + EPID_OFFSET, &PID, sizeof(PID))
+#define SET_NOISEGENERATOR_PID memcpy((pid_t *) shmem.data() + NPID_OFFSET, &PID, sizeof(PID))
+#define SET_DECODER_PID memcpy((pid_t *) shmem.data() + DPID_OFFSET, &PID, sizeof(PID))

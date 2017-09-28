@@ -58,12 +58,28 @@
 			isa = PBXGroup;
 			children = (
 				927D7AF51F6996130092580A /* main.cpp */,
-				92EAA15B1F78283500CDBEB5 /* encoder.cpp */,
-				92EAA15C1F78283500CDBEB5 /* encoder.h */,
+				929C89501F7C01C800225189 /* encoder */,
+				929C894F1F7C01BE00225189 /* input */,
+			);
+			path = cc_encoder;
+			sourceTree = "<group>";
+		};
+		929C894F1F7C01BE00225189 /* input */ = {
+			isa = PBXGroup;
+			children = (
 				92E0F3FB1F76D22D00D40386 /* input.cpp */,
 				92E0F3FC1F76D22D00D40386 /* input.h */,
 			);
-			path = cc_encoder;
+			name = input;
+			sourceTree = "<group>";
+		};
+		929C89501F7C01C800225189 /* encoder */ = {
+			isa = PBXGroup;
+			children = (
+				92EAA15B1F78283500CDBEB5 /* encoder.cpp */,
+				92EAA15C1F78283500CDBEB5 /* encoder.h */,
+			);
+			name = encoder;
 			sourceTree = "<group>";
 		};
 		92A2E8B71F704D7400B2346E /* Frameworks */ = {

@@ -1,31 +1,29 @@
+// (7, 4) Hamming code encoder
+
 #include "encoder.h"
 
-encoder :: encoder (const int * _sdata, const int * _f_poly) {
-    sdata = _sdata;
-    f_poly = _f_poly;
-}
+encoder :: encoder
+(const int * _s_data, const int * _s_data_size, const int * _f_polynomial) : s_data(_s_data), s_data_size(_s_data_size), f_polynomial(_f_polynomial) {};
 
-int encoder :: ajdata() {
-    int divider = * sdata << (N - K);
-    int divident = * f_poly << (N - K);
+const int * encoder :: get_aj_data() {
+    const int * s_data_ = s_data;
     
-    cout << "Divider: " << bitset<N>(divider) << endl;
-    cout << "Divident: " << bitset<N>(divident) << endl;
-    
-    while (divider > 0b111) {
-        divident = * f_poly << (N - K);
-        for (int i = N; i > K; i--) {
-            if (bitset<N>(divider).test(i - 1) == false) {
-                divident >>= 1;
-            } else break;
+    while (s_data_ < s_data + *s_data_size) {
+        int divider = *s_data_ << (n - k);
+        int divident = *f_polynomial << (n - k);
+        
+        while (divider >= pow(2, n - k)) {
+            divident = *f_polynomial << (n - k);
+            for (int i = n; i > k; i--) {
+                if (bitset<n>(divider).test(i - 1) == false) {
+                    divident >>= 1;
+                } else break;
+            }
+            divider ^= divident;
         }
-        divider ^= divident;
+        divider += *s_data_ << (n - k);
+        aj_data.push_back(divider);
+        s_data_++;
     }
-    
-    cout << "Syndrom: " << bitset<(N - K)>(divider) << endl << endl;
-    
-    divider += * sdata << (N - K);
-    sdata++;
-    
-    return divider;
+    return aj_data.data();
 }

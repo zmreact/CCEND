@@ -13,46 +13,54 @@ using namespace std;
 
 int main(int argc, const char * argv[]) {
     cout << "University: " << UNIVERSITY << endl
-    << "Student group: " << STGROUP << endl
-    << "Developers: " << DEVELOPERS;
+         << "Student group: " << STGROUP << endl
+         << "Developers: " << DEVELOPERS;
     cout << endl << endl;
     
     shmem.attach();
     if (shmem.isAttached()) {
-        cout << "Shared memory size: " << shmem.size() << " " << "Bytes";
+        int * const shmem_data_pointer = (int *) shmem.data() + D_OFFSET;
+        const int shmem_size = shmem.size();
+        
+        cout << "Shared memory size: " << shmem_size << " " << "Bytes";
         cout << endl << endl;
         
-        SET_EPID;
+        SET_ENCODER_PID;
         EUP_1;
         SWITCH_TO_E_STATE;
-        STATE = E;
         
-
         while (EUP) {
             switch (STATE) {
                 case E:
                 {
+                    input input;
+                    const int * s_data = input.s_data;
+                    const int * s_data_size = input.s_data_size;
+                    const int * s_sequience = input.s_sequience;
+                    const int * f_polynomial = input.f_polynomial;
+                    
+                    encoder encoder(s_data, s_data_size, f_polynomial);
+                    const int * aj_data = encoder.get_aj_data();
+                    const int aj_data_size = sizeof(*aj_data) * n;
+                    memcpy(shmem_data_pointer, aj_data, aj_data_size);
+                    
+                    
                     cout << "E_STATE" << endl << endl;
                     
                     cout << "Source data codes: " << endl;
-                    input input;
-                    for (int i = 0; i < * input.sdatasize; i++) {
-                        memcpy((int *) shmem.data() + D_OFFSET + i, &input.sdata[*input.sseq - 1], sizeof(*input.sdata));
-                        input.sseq++;
-                    }
-                    
-                    for (int i = 0; i < * input.sdatasize; i++) {
-                        cout << bitset<4>(* ((int *) shmem.data() + D_OFFSET + i)) << " ";
+                    for (int i = 0; i < *s_data_size; i++) {
+                        cout << bitset<k>(s_data[*s_sequience - 1]) << " ";
+                        s_sequience++;
                     }
                     cout << endl << endl;
                     
                     cout << "Encoding to (7, 4) anti-jamming cyclic codes..." << endl;
                     cout << "Forming polynomial: " << endl;
-                    cout << bitset<4>(*input.f_poly) << endl;
+                    cout << bitset<k>(*f_polynomial) << endl;
                     cout << "Source anti-jamming codes:" << endl;
-                    encoder encoder((const int *) shmem.data() + D_OFFSET, input.f_poly);
-                    for (int i = 0; i < * input.sdatasize; i++) {
-                        encoder.ajdata();
+                    
+                    for (int i = 0; i < *s_data_size; i++) {
+                        cout << bitset<n>(* (shmem_data_pointer + i)) << " ";
                     }
                     cout << endl << endl;
                     
