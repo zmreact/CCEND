@@ -18,33 +18,23 @@ int main(int argc, const char * argv[]) {
     cout << endl << endl;
     
     shmem_alloc_and_clean();
-    sema.acquire();
     shmem.attach();
     
     if (shmem.isAttached()) {
-        int * const shmem_data_pointer = (int * const) shmem.data() + D_OFFSET;
-        const int shmem_size = shmem.size();
-        
-        cout << "Shared memory size: " << shmem_size << " " << "Bytes";
+        cout << "Shared memory size: " << shmem.size() << " " << "Bytes";
         cout << endl << endl;
         
-        SET_ENCODER_PID;
-        SET_E_UP;
-        GIVE_E_TURN;
+        input input;
+        const int * s_data;
+        const int * const s_data_size = input.s_data_size;
+        const int * s_sequience;
+        const int * const f_polynomial = input.f_polynomial;
         
-        while (E_STATE) {
+        encoder encoder(f_polynomial);
+        
+        while (true) {
             switch (TURN) {
                 case E:
-                {
-                    input input;
-                    const int * s_data;
-                    const int * const s_data_size = input.s_data_size;
-                    const int * s_sequience;
-                    const int * const f_polynomial = input.f_polynomial;
-                    
-                    encoder encoder(f_polynomial);
-                    
-                    //writing (7, 4) codes to shared memory
                     s_data = input.s_data;
                     s_sequience = input.s_sequience;
                     for (int i = 0; i < *s_data_size; i++) {
@@ -52,14 +42,11 @@ int main(int argc, const char * argv[]) {
                         int * aj_data = new int(encoder.aj_data(s_data_i));
                         int aj_data_size = sizeof(*aj_data);
                         
-                        memcpy(shmem_data_pointer + i, aj_data, aj_data_size);
+                        memcpy(DATA_PTR + i, aj_data, aj_data_size);
                         s_sequience++;
                         
                         delete s_data_i, delete aj_data;
                     }
-                    
-                    
-                    cout << "E_TURN" << endl << endl;
                     
                     cout << "Source data codes: " << endl;
                     s_data = input.s_data;
@@ -71,36 +58,27 @@ int main(int argc, const char * argv[]) {
                     cout << "Forming polynomial: " << endl;
                     cout << bitset<k>(*f_polynomial) << endl;
                     cout << "Source anti-jamming codes:" << endl;
-                    for (int i = 0; i < *s_data_size; i++) cout << bitset<n>(*(shmem_data_pointer + i)) << " ";
+                    for (int i = 0; i < *s_data_size; i++) cout << bitset<n>(*(DATA_PTR + i)) << " ";
                     cout << endl << endl;
                     
                     cout << "Sending...";
                     cout << endl << endl;
-
-                    if (N_STATE) {
-                        sema.release();
-                        GIVE_N_TURN;
-                    }
-                    else {
-                        sema.release();
-                        GIVE_D_TURN;
-                    }
+                    
+                    WAIT_TURN;
+                    
                     break;
-                }
+                    
                 case N:
-                    cout << "N_TURN" << endl << endl;
-                    
-                    if (!N_STATE) GIVE_D_TURN;
-                    sleep(1);
-                    
                     break;
+                    
                 case D:
-                    cout << "D_TURN" << endl << endl;
-                    
-                    sleep(1);
-                    
                     break;
+                    
+                default:
+                    break;
+                    
             }
+            usleep(5000);
         }
     } else cout << "Shared memory is not attached" << endl << endl;
     

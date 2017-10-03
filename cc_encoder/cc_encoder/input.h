@@ -1,4 +1,6 @@
 // Input parser. Gets source sequence, source data (4-bit codes) and forming polynomial as an input.
+#ifndef input_h
+#define input_h
 
 #include <stdio.h>
 #include <fstream>
@@ -23,3 +25,5 @@ private:
     static const int default_s_data_size;
     const int default_f_polynomial = 0b1011;
 };
+
+#endif
