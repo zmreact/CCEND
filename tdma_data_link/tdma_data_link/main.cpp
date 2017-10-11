@@ -1,4 +1,4 @@
-// E-N-D switcher
+// TDMA realization
 
 #include <iostream>
 #include "../../include/shared.h"

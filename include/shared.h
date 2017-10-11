@@ -23,10 +23,6 @@ static const turns N_TURN =     N;
 static const turns D_TURN =     D;
 static const turns WAIT_TURN =  W;
 
-static int Ecounter =           0;
-static int Ncounter =           0;
-static int Dcounter =           0;
-
 #define TURN_OFFSET             0
 #define DATA_OFFSET             4
 #define DATA_SIZE               64
