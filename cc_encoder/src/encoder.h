@@ -6,7 +6,6 @@
 #include <iostream>
 #include <bitset>
 #include <math.h>
-#include <vector>
 #include "../../include/shared.h"
 
 using namespace std;

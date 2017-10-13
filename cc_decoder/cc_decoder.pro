@@ -14,11 +14,9 @@ DEFINES += QT_DEPRECATED_WARNINGS
 # You can also select to disable deprecated APIs only up to a certain version of Qt.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
-HEADERS += src/encoder.h \
-        src/input.h \
+HEADERS += src/decoder.h \
         ../include/shared.h
 
 SOURCES += src/main.cpp \
-        src/encoder.cpp \
-        src/input.cpp \
+        src/decoder.cpp \
         ../include/shared.cpp

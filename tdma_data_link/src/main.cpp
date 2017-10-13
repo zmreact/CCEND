@@ -2,7 +2,6 @@
 
 #include <iostream>
 #include "../../include/shared.h"
-using namespace std;
 
 int main(int argc, const char * argv[]) {
     shmem_alloc_and_clean();
@@ -10,13 +9,13 @@ int main(int argc, const char * argv[]) {
     
     while (true) {
         GIVE_E_TURN;
-        cout << "E_TURN" << endl;
+        std::cout << "E_TURN" << std::endl;
         usleep(50000);
         GIVE_N_TURN;
-        cout << "N_TURN" << endl;
+        std::cout << "N_TURN" << std::endl;
         usleep(50000);
         GIVE_D_TURN;
-        cout << "D_TURN" << endl;
+        std::cout << "D_TURN" << std::endl;
         usleep(50000);
     }
     

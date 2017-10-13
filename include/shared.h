@@ -3,6 +3,7 @@
 #define shared_h
 
 
+#include <iostream>
 #include <unistd.h>
 #include <QtCore/qsharedmemory.h>
 #include <QtCore/qsystemsemaphore.h>

@@ -13,48 +13,18 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			name = "Qt Qmake";
 			shellPath = "/bin/sh";
-			shellScript = "make -C /Users/Denis/Dropbox/Programming/cc_edcoder/cc_encoder/ -f cc_encoder.xcodeproj/qt_makeqmake.mak";
+			shellScript = "make -C /Users/Denis/Dropbox/Programming/cc_edcoder/noise_generator/ -f noise_generator.xcodeproj/qt_makeqmake.mak";
 			showEnvVarsInLog = "0";
 		};
-		72D2A6598F2A016E7999AEBB = {
+		5E3DBA4182423FC92E51652A = {
 			isa = PBXFileReference;
-			path = "/Users/Denis/Dropbox/Programming/cc_edcoder/cc_encoder/src/main.cpp";
+			path = "/Users/Denis/Dropbox/Programming/cc_edcoder/noise_generator/src/main.cpp";
 			name = "main.cpp";
 			sourceTree = "<absolute>";
 			lastKnownFileType = "sourcecode.cpp.cpp";
 		};
-		B8C108161D034A119D7C8112 = {
-			fileRef = "72D2A6598F2A016E7999AEBB";
-			isa = PBXBuildFile;
-			settings = {
-				ATTRIBUTES = (
-					);
-			};
-		};
-		98CD2EAC2E3066796AFCDC80 = {
-			isa = PBXFileReference;
-			path = "/Users/Denis/Dropbox/Programming/cc_edcoder/cc_encoder/src/encoder.cpp";
-			name = "encoder.cpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.cpp.cpp";
-		};
-		13D2558A3DDEA1867B5043C2 = {
-			fileRef = "98CD2EAC2E3066796AFCDC80";
-			isa = PBXBuildFile;
-			settings = {
-				ATTRIBUTES = (
-					);
-			};
-		};
-		96943E76D76C96A3621265C2 = {
-			isa = PBXFileReference;
-			path = "/Users/Denis/Dropbox/Programming/cc_edcoder/cc_encoder/src/input.cpp";
-			name = "input.cpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.cpp.cpp";
-		};
-		3A67B7422C94C608A60B5620 = {
-			fileRef = "96943E76D76C96A3621265C2";
+		A7413F5719570F4E067EEFC8 = {
+			fileRef = "5E3DBA4182423FC92E51652A";
 			isa = PBXBuildFile;
 			settings = {
 				ATTRIBUTES = (
@@ -76,20 +46,6 @@
 					);
 			};
 		};
-		4F09FCB89E6A1B81D6D54F8A = {
-			isa = PBXFileReference;
-			path = "/Users/Denis/Dropbox/Programming/cc_edcoder/cc_encoder/src/encoder.h";
-			name = "encoder.h";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		D687DFE546BFCC684CA38CEB = {
-			isa = PBXFileReference;
-			path = "/Users/Denis/Dropbox/Programming/cc_edcoder/cc_encoder/src/input.h";
-			name = "input.h";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
 		368BDEE9EFE7E5C4D20679F1 = {
 			isa = PBXFileReference;
 			path = "/Users/Denis/Dropbox/Programming/cc_edcoder/include/shared.h";
@@ -97,10 +53,10 @@
 			sourceTree = "<absolute>";
 			lastKnownFileType = "sourcecode.c.h";
 		};
-		AA5E6B9C968411668D5F4D5D = {
+		6494A6AE58C6FC5C5AF062A7 = {
 			isa = PBXFileReference;
-			path = "/Users/Denis/Dropbox/Programming/cc_edcoder/cc_encoder/cc_encoder.pro";
-			name = "cc_encoder.pro";
+			path = "/Users/Denis/Dropbox/Programming/cc_edcoder/noise_generator/noise_generator.pro";
+			name = "noise_generator.pro";
 			sourceTree = "<absolute>";
 			lastKnownFileType = "text";
 		};
@@ -128,11 +84,7 @@
 		921315FAA7F261D737F4F4C7 = {
 			isa = PBXGroup;
 			children = (
-				"72D2A6598F2A016E7999AEBB",
-				"98CD2EAC2E3066796AFCDC80",
-				"96943E76D76C96A3621265C2",
-				"4F09FCB89E6A1B81D6D54F8A",
-				"D687DFE546BFCC684CA38CEB");
+				"5E3DBA4182423FC92E51652A");
 			name = "src";
 			sourceTree = "<group>";
 		};
@@ -155,7 +107,7 @@
 		74B182DB50CB5611B5C1C297 = {
 			isa = PBXGroup;
 			children = (
-				"AA5E6B9C968411668D5F4D5D",
+				"6494A6AE58C6FC5C5AF062A7",
 				"0C5F05FCA516C3F08537996C");
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -168,15 +120,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			name = "Qt Preprocessors";
 			shellPath = "/bin/sh";
-			shellScript = "make -C /Users/Denis/Dropbox/Programming/cc_edcoder/cc_encoder/ -f cc_encoder.xcodeproj/qt_preprocess.mak";
+			shellScript = "make -C /Users/Denis/Dropbox/Programming/cc_edcoder/noise_generator/ -f noise_generator.xcodeproj/qt_preprocess.mak";
 			showEnvVarsInLog = "0";
 		};
 		F7E50F631C51CD5B5DC0BC43 = {
 			buildActionMask = 2147483647;
 			files = (
-				"B8C108161D034A119D7C8112",
-				"13D2558A3DDEA1867B5043C2",
-				"3A67B7422C94C608A60B5620",
+				"A7413F5719570F4E067EEFC8",
 				"3F2647D6611113528BCF966B",
 				"39F111B9E00212F56735D31E");
 			isa = PBXSourcesBuildPhase;
@@ -244,16 +194,16 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			name = "Link Binary With Libraries";
 		};
-		8F943555252EA34C8940B0BC = {
+		4F7267283F29C147B06B2A35 = {
 			isa = PBXFileReference;
 			includeInIndex = 0;
 			explicitFileType = "compiled.mach-o.executable";
-			path = "cc_encoder";
+			path = "noise_generator";
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		FE0A091FDBFB3E9C31B7A1BD = {
 			children = (
-				"8F943555252EA34C8940B0BC");
+				"4F7267283F29C147B06B2A35");
 			isa = PBXGroup;
 			name = "Products";
 			sourceTree = "<group>";
@@ -266,10 +216,10 @@
 				"AF39DD055C3EF8226FBE929D",
 				"FE0A091FDBFB3E9C31B7A1BD");
 			isa = PBXGroup;
-			name = "cc_encoder";
+			name = "noise_generator";
 			sourceTree = "<group>";
 		};
-		8EA12676B92CB25629C82689 = {
+		C5DDE0A73E64B4B2389A0FC9 = {
 			buildPhases = (
 				"5E618435888B9D49F8540165",
 				"7EF0942E79C014DCEC8976BC");
@@ -282,24 +232,24 @@
 			productName = "Qt Preprocess";
 			name = "Qt Preprocess";
 		};
-		C1528E81A87DC10DC59FB14D = {
+		6D7986CE83287DE619B414F8 = {
 			isa = PBXTargetDependency;
-			target = "8EA12676B92CB25629C82689";
+			target = "C5DDE0A73E64B4B2389A0FC9";
 		};
-		4C8D4646FDF4C9C175569430 = {
+		9A5A78FD5D23301E42C0F80B = {
 			buildPhases = (
 				"F7E50F631C51CD5B5DC0BC43",
 				"D1C883685E82D5676953459A");
 			dependencies = (
-				"C1528E81A87DC10DC59FB14D");
-			productReference = "8F943555252EA34C8940B0BC";
+				"6D7986CE83287DE619B414F8");
+			productReference = "4F7267283F29C147B06B2A35";
 			buildConfigurationList = 6CC3B5D2136C7CD6A5CF5A59;
 			isa = PBXNativeTarget;
 			buildRules = (
 );
 			productType = "com.apple.product-type.tool";
-			name = "cc_encoder";
-			productName = "cc_encoder";
+			name = "noise_generator";
+			productName = "noise_generator";
 		};
 		3AA6C32AC930069E80220CF1 = {
 			isa = XCBuildConfiguration;
@@ -311,13 +261,13 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = "YES";
 				GCC_OPTIMIZATION_LEVEL = "0";
 				ONLY_ACTIVE_ARCH = "YES";
-				PRODUCT_NAME = "cc_encoder";
+				PRODUCT_NAME = "noise_generator";
 				QT_LIBRARY_SUFFIX = "_debug";
 				SDKROOT = "macosx";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				CC = "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang";
 				LDPLUSPLUS = "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++";
-				SYMROOT = "/Users/Denis/Dropbox/Programming/cc_edcoder/cc_encoder/";
+				SYMROOT = "/Users/Denis/Dropbox/Programming/cc_edcoder/noise_generator/";
 				DYLIB_CURRENT_VERSION = "1.0.0";
 				DYLIB_COMPATIBILITY_VERSION = "1.0";
 				MACOSX_DEPLOYMENT_TARGET = "10.10";
@@ -372,10 +322,10 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = "YES";
 				GCC_OPTIMIZATION_LEVEL = "0";
 				ONLY_ACTIVE_ARCH = "YES";
-				PRODUCT_NAME = "cc_encoder";
+				PRODUCT_NAME = "noise_generator";
 				QT_LIBRARY_SUFFIX = "_debug";
 				SDKROOT = "macosx";
-				PRODUCT_NAME = "cc_encoder";
+				PRODUCT_NAME = "noise_generator";
 			};
 			name = "Debug";
 		};
@@ -387,13 +337,13 @@
 				COPY_PHASE_STRIP = "YES";
 				ENABLE_BITCODE = "NO";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = "NO";
-				PRODUCT_NAME = "cc_encoder";
+				PRODUCT_NAME = "noise_generator";
 				QT_LIBRARY_SUFFIX = "";
 				SDKROOT = "macosx";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				CC = "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang";
 				LDPLUSPLUS = "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++";
-				SYMROOT = "/Users/Denis/Dropbox/Programming/cc_edcoder/cc_encoder/";
+				SYMROOT = "/Users/Denis/Dropbox/Programming/cc_edcoder/noise_generator/";
 				DYLIB_CURRENT_VERSION = "1.0.0";
 				DYLIB_COMPATIBILITY_VERSION = "1.0";
 				MACOSX_DEPLOYMENT_TARGET = "10.10";
@@ -446,10 +396,10 @@
 				COPY_PHASE_STRIP = "YES";
 				ENABLE_BITCODE = "NO";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = "NO";
-				PRODUCT_NAME = "cc_encoder";
+				PRODUCT_NAME = "noise_generator";
 				QT_LIBRARY_SUFFIX = "";
 				SDKROOT = "macosx";
-				PRODUCT_NAME = "cc_encoder";
+				PRODUCT_NAME = "noise_generator";
 			};
 			name = "Release";
 		};
@@ -479,8 +429,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				"4C8D4646FDF4C9C175569430",
-				"8EA12676B92CB25629C82689");
+				"9A5A78FD5D23301E42C0F80B",
+				"C5DDE0A73E64B4B2389A0FC9");
 			attributes = {
 				TargetAttributes = {
 				};

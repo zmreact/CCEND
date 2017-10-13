@@ -1,8 +1,6 @@
 // Shared memory cleaner
 #include <iostream>
 #include "../../include/shared.h"
-#include <QtCore/qsystemsemaphore.h>
-using namespace std;
 
 
 int main(int argc, const char * argv[]) {
@@ -10,12 +8,12 @@ int main(int argc, const char * argv[]) {
     
     sema.acquire();
     if (owed_shmem.attach()) {
-        cout << "Cleaning if unattached shared memory is present..." << endl;
+        std::cout << "Cleaning if unattached shared memory is present..." << std::endl;
         owed_shmem.detach();
-        cout << "OK" << endl << endl;
+        std::cout << "OK" << std::endl << std::endl;
     }
     else {
-        cout << "Nothing to clean" << endl << endl;
+        std::cout << "Nothing to clean" << std::endl << std::endl;
     }
     sema.release();
     

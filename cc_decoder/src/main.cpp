@@ -22,9 +22,8 @@ int main(int argc, const char * argv[]) {
     decoder decoder(&f_polynomial);
     
     if (shmem.isAttached()) {
-        cout
-        << "Shared memory size: " << shmem.size() << " " << "Bytes" << endl
-        << endl;
+        cout << "Shared memory size: " << shmem.size() << " " << "Bytes";
+        cout << endl << endl;
         
         while (true) {
             switch (TURN) {
@@ -36,15 +35,21 @@ int main(int argc, const char * argv[]) {
                     
                 case D:
                     cout << "Received anti-jamming codes: " << endl;
+                    
                     for (int i = 0; i < DATA_SIZE_INT; i++) cout << bitset<n>(*(DATA_PTR + i)) << " ";
                     cout << endl << endl;
                     
+                    
                     cout << "Decoding (7, 3) anti-jamming codes..." << endl;
+                    
                     cout << "Received data codes:" << endl;
+                    
                     for (int i = 0; i < DATA_SIZE_INT; i++) cout << bitset<k>(decoder.d_data(DATA_PTR + i)) << " ";
                     cout << endl << endl;
                     
+                    
                     WAIT_TURN;
+                    
                     
                     break;
                     

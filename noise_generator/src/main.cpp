@@ -7,6 +7,7 @@
 using namespace std;
 
 int main(int argc, const char * argv[]) {
+    shmem_alloc_and_clean();
     shmem.attach();
     
     if (shmem.isAttached()) {
