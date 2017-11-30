@@ -1,66 +1,64 @@
 #include <iostream>
-#include <math.h>
-#include <unistd.h>
 #include "../../include/shared.h"
+#include "../../include/library.h"
 #include "input.h"
 #include "encoder.h"
-using namespace std;
 
 #define UNIVERSITY "MTUCI"
 #define STGROUP "BSU1401"
 #define DEVELOPERS "Denis Petuhov, Kaledina Anastasija, Korotygin Aleksandr, Ezhova Elena, Krasnov Kirill"
 
 int main(int argc, const char * argv[]) {
-    cout << "University: " << UNIVERSITY << endl << "Student group: " << STGROUP << endl << "Developers: " << DEVELOPERS;
-    cout << endl << endl;
+    std::cout << "University: " << UNIVERSITY << std::endl << "Student group: " << STGROUP << std::endl << "Developers: " << DEVELOPERS;
+    std::cout << std::endl << std::endl;
     
     shmem_alloc_and_clean();
     shmem.attach();
     
     
     if (shmem.isAttached()) {
-        cout << "Shared memory size: " << shmem.size() << " " << "Bytes";
-        cout << endl << endl;
+        std::cout << "Shared memory size: " << shmem.size() << " " << "Bytes";
+        std::cout << std::endl << std::endl;
         
         input input;
-        encoder encoder(&f_polynomial);
+        encoder Encoder;
         
         while (true) {
             switch (TURN) {
                 case E:
-                    cout << "Source data codes: " << endl;
+                    std::cout << "Source data codes: " << std::endl;
                     
                     for (int i = 0; i < *input.s_data_size; i++) {
-                        int * curr_dat = new int(input.s_data[input.s_sequience[i] - 1]);
-                        cout << bitset<k>(*curr_dat) << " ";
+                        int * curr_dat = new int(input.s_data[input.s_sequence[i] - 1]);
+                        std::cout << bitset<k>(*curr_dat) << " ";
                         delete curr_dat;
                     }
                     
-                    cout << endl << endl;
+                    std::cout << std::endl << std::endl;
                     
                     
-                    cout << "Encoding to (7, 4) anti-jamming cyclic codes..." << endl;
+                    std::cout << "Encoding to (7, 4) anti-jamming cyclic codes..." << std::endl;
                     
-                    cout << "Forming polynomial: " << endl;
+                    std::cout << "Forming polynomial: " << std::endl;
                     
-                    cout << bitset<k>(f_polynomial) << endl;
+                    std::cout << bitset<k>(f_polynomial) << std::endl;
                     
-                    cout << "Source anti-jamming codes:" << endl;
+                    std::cout << "Source anti-jamming codes:" << std::endl;
                     
                     for (int i = 0; i < DATA_SIZE_INT; i++) {
-                        int * curr_dat = new int(input.s_data[input.s_sequience[i] - 1]);
-                        int * aj_data = new int(encoder.aj_data(curr_dat));
+                        int * curr_dat = new int(input.s_data[input.s_sequence[i] - 1]);
+                        int * aj_data = new int(Encoder.aj_data(curr_dat));
                         memcpy(DATA_PTR + i, aj_data, sizeof(*aj_data));
                         delete aj_data;
                         delete curr_dat;
                     }
                     
-                    for (int i = 0; i < DATA_SIZE_INT; i++) cout << bitset<n>(*(DATA_PTR + i)) << " ";
-                    cout << endl << endl;
+                    for (int i = 0; i < DATA_SIZE_INT; i++) std::cout << bitset<n>(*(DATA_PTR + i)) << " ";
+                    std::cout << std::endl << std::endl;
                     
                     
-                    cout << "Sending...";
-                    cout << endl << endl;
+                    std::cout << "Sending...";
+                    std::cout << std::endl << std::endl;
                     
                     
                     WAIT_TURN;
@@ -72,9 +70,9 @@ int main(int argc, const char * argv[]) {
                     break;
                     
             }
-            usleep(5000);
+            cpsleep(10);
         }
-    } else cout << "Shared memory is not attached" << endl << endl;
+    } else std::cout << "Shared memory is not attached" << std::endl << std::endl;
     
     shmem.detach();
     

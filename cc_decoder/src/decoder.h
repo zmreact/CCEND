@@ -14,14 +14,13 @@ using namespace std;
 
 class decoder {
 public:
-    decoder(const int * const _f_polynomial);
+    decoder();
     int d_data(const int * _aj_data);
     int get_syndrome(const int * _aj_data);
     
 private:
-    const int * const f_polynomial;
-    const vector<const int> error_vectors;
-    const vector<const int> error_vectors_syndromes;
+    vector<int> error_vectors;
+    vector<int> error_vectors_syndromes;
     
 };
 

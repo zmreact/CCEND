@@ -2,7 +2,7 @@
 
 #include <iostream>
 #include <math.h>
-#include <unistd.h>
+#include "../../include/library.h"
 #include "../../include/shared.h"
 using namespace std;
 
@@ -35,7 +35,7 @@ int main(int argc, const char * argv[]) {
                     break;
                     
             }
-            usleep(5000);
+            cpsleep(10);
         }
     }
     

@@ -1,7 +1,7 @@
 #include <iostream>
 #include <math.h>
-#include <unistd.h>
 #include "../../include/shared.h"
+#include "../../include/library.h"
 #include "decoder.h"
 using namespace std;
 
@@ -19,7 +19,7 @@ int main(int argc, const char * argv[]) {
     shmem_alloc_and_clean();
     shmem.attach();
     
-    decoder decoder(&f_polynomial);
+    decoder Decoder;
     
     if (shmem.isAttached()) {
         cout << "Shared memory size: " << shmem.size() << " " << "Bytes";
@@ -44,7 +44,7 @@ int main(int argc, const char * argv[]) {
                     
                     cout << "Received data codes:" << endl;
                     
-                    for (int i = 0; i < DATA_SIZE_INT; i++) cout << bitset<k>(decoder.d_data(DATA_PTR + i)) << " ";
+                    for (int i = 0; i < DATA_SIZE_INT; i++) cout << bitset<k>(Decoder.d_data(DATA_PTR + i)) << " ";
                     cout << endl << endl;
                     
                     
@@ -57,7 +57,7 @@ int main(int argc, const char * argv[]) {
                     break;
                     
             }
-            usleep(5000);
+            cpsleep(10);
         }
         shmem.detach();
     }
