@@ -1,6 +1,5 @@
 // Shared memory realization
 #include "shared.h"
-#include <iostream>
 
 void shmem_alloc_and_clean () {
     sema.acquire();
@@ -9,7 +8,7 @@ void shmem_alloc_and_clean () {
     }
     if (!shmem.attach()) {
         shmem.create(DATA_OFFSET + DATA_SIZE);
-        std::cout << "Shared memory created\n";
+        std::cout << "Shared memory created" << std::endl;
     }
     sema.release();
 }
