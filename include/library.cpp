@@ -7,3 +7,14 @@ void cpsleep(int sleep_ms) {
     Sleep(sleep_ms);
 #endif
 }
+
+void print_press_enter() {
+    printf("Press ENTER to return to main menu\n");
+    flush;
+    char tmp = 0;
+
+    while (tmp != '\r' && tmp != '\n') {
+        tmp = getchar();
+    }
+    flush;
+}

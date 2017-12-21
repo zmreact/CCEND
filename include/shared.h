@@ -2,7 +2,6 @@
 #ifndef shared_h
 #define shared_h
 
-
 #include <iostream>
 #include <QtCore/qsharedmemory.h>
 #include <QtCore/qsystemsemaphore.h>
@@ -21,7 +20,7 @@ enum turns {E, N, D, W};
 static const turns E_TURN =     E;
 static const turns N_TURN =     N;
 static const turns D_TURN =     D;
-static const turns WAIT_TURN =  W;
+static const turns WAIT =       W;
 
 #define TURN_OFFSET             0
 #define DATA_OFFSET             4
@@ -33,10 +32,9 @@ static const turns WAIT_TURN =  W;
 
 #define TURN                    *TURN_PTR
 
-#define GIVE_E_TURN             memcpy(TURN_PTR, &E_TURN, sizeof(E_TURN))
-#define GIVE_N_TURN             memcpy(TURN_PTR, &N_TURN, sizeof(N_TURN))
-#define GIVE_D_TURN             memcpy(TURN_PTR, &D_TURN, sizeof(D_TURN))
-#define WAIT_TURN               memcpy(TURN_PTR, &WAIT_TURN, sizeof(WAIT_TURN))
-
+#define PASS_TURN_E             memcpy(TURN_PTR, &E_TURN, sizeof(E_TURN))
+#define PASS_TURN_N             memcpy(TURN_PTR, &N_TURN, sizeof(N_TURN))
+#define PASS_TURN_D             memcpy(TURN_PTR, &D_TURN, sizeof(D_TURN))
+#define WAIT_TURN               memcpy(TURN_PTR, &WAIT, sizeof(WAIT))
 
 #endif

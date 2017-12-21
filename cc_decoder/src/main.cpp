@@ -9,7 +9,7 @@ using namespace std;
 #define STGROUP "BSU1401"
 #define DEVELOPERS "Denis Petuhov, Kaledina Anastasija, Korotygin Aleksandr, Ezhova Elena, Krasnov Kirill"
 
-int main(int argc, const char * argv[]) {
+void main(int argc, const char * argv[]) {
     cout
     << "University: " <<        UNIVERSITY <<       endl
     << "Student group: " <<     STGROUP <<          endl
@@ -19,26 +19,19 @@ int main(int argc, const char * argv[]) {
     shmem_alloc_and_clean();
     shmem.attach();
     
-    decoder Decoder;
-    
     if (shmem.isAttached()) {
         cout << "Shared memory size: " << shmem.size() << " " << "Bytes";
         cout << endl << endl;
         
+        decoder Decoder;
+
         while (true) {
             switch (TURN) {
-                case E:
-                    break;
-                    
-                case N:
-                    break;
-                    
                 case D:
                     cout << "Received anti-jamming codes: " << endl;
                     
                     for (int i = 0; i < DATA_SIZE_INT; i++) cout << bitset<n>(*(DATA_PTR + i)) << " ";
                     cout << endl << endl;
-                    
                     
                     cout << "Decoding (7, 3) anti-jamming codes..." << endl;
                     
@@ -47,9 +40,7 @@ int main(int argc, const char * argv[]) {
                     for (int i = 0; i < DATA_SIZE_INT; i++) cout << bitset<k>(Decoder.d_data(DATA_PTR + i)) << " ";
                     cout << endl << endl;
                     
-                    
                     WAIT_TURN;
-                    
                     
                     break;
                     
@@ -57,11 +48,9 @@ int main(int argc, const char * argv[]) {
                     break;
                     
             }
-            cpsleep(10);
+            cpsleep(500);
         }
         shmem.detach();
     }
     else cout << "Shared memory is not attached" << endl << endl;
-    
-    return 0;
 }

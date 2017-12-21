@@ -1,4 +1,4 @@
-// Input parser. Gets source sequence, source data (4-bit codes) and forming polynomial as an input.
+// Input parser. Takes source sequence, source data (4-bit codes) and forming polynomial as an input.
 #include "input.h"
 
 input :: input() :

@@ -6,16 +6,13 @@
 #include "../../include/shared.h"
 using namespace std;
 
-int main(int argc, const char * argv[]) {
+void main(int argc, const char * argv[]) {
     shmem_alloc_and_clean();
     shmem.attach();
     
     if (shmem.isAttached()) {
         while (true) {
             switch (TURN) {
-                case E:
-                    break;
-                    
                 case N:
                     cout << "Generating noise..." << endl << endl;
                     for (int i = 0; i < DATA_SIZE_INT; i++) {
@@ -23,23 +20,16 @@ int main(int argc, const char * argv[]) {
                         int noise_plus_data = noise ^ *(DATA_PTR + i);
                         memcpy(DATA_PTR + i, &noise_plus_data, sizeof(noise_plus_data));
                     }
-                    
+
                     WAIT_TURN;
-                    
+
                     break;
-                    
-                case D:
-                    break;
-                    
+
                 default:
                     break;
                     
             }
-            cpsleep(10);
+            cpsleep(500);
         }
     }
-    
-    shmem.detach();
-    
-    return 0;
 }
