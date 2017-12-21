@@ -1,5 +1,5 @@
 # cc_edcoder RU
-cc_edcoder - Кодер/декодер циклических кодов и генератор шума, реализующий процессы кодирования/декодирования исходных данных кодом Хэмминга (7, 4) и внесения ошибок в виде 3-х отдельных независимых приложений, использующих экземпляр класса QSharedMemory в качестве симулятора канала связи с ВРК (TDMA).
+cc_edcoder - Кодек циклических кодов и генератор шума, реализующий процессы кодирования/декодирования исходных данных кодом Хэмминга (7, 4) и внесения ошибок в виде 3-х отдельных независимых приложений, использующих экземпляр класса QSharedMemory в качестве симулятора канала связи с ВРК (TDMA).
 
 ## Компоненты:
 
@@ -28,7 +28,7 @@ memory_cleaner - Очиститель QSharedMemory (в Windows реализац
 Библиотеку QtCore необходимо установить.
 
 # cc_edcoder EN
-cc_edcoder - Cyclic code encoder/decoder and noise generator that implements encoding/decoding of (7, 4) Hamming codes and error insertion processes as 3 separate independent applications that use instance of QSharedMemory class as TDMA data link simulator.
+cc_edcoder - Cyclic code codec and noise generator that implements encoding/decoding of (7, 4) Hamming codes and error insertion processes as 3 separate independent applications that use instance of QSharedMemory class as TDMA data link simulator.
 
 ## Windows:
 Libraries QtCore and Visual C++ Redistributable are needed to run applications.
